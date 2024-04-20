@@ -79,9 +79,9 @@ def recommend(movie_name):
     return recommended, recommend_poster
 
 
-movie_list = pk.load(open("pages\movie.pkl", "rb"))
+movie_list = pk.load(open("pages/movie.pkl", "rb"))
 movie_list = pd.DataFrame(movie_list)
-similarity = pk.load(open("pages\similarity.pkl", "rb"))
+similarity = pk.load(open("pages/similarity.pkl", "rb"))
 selected = st.selectbox("Enter Movie", (movie_list["title"]))
 
 if st.button("Recommend"):
